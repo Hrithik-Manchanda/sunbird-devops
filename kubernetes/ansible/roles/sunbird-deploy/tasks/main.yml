@@ -40,9 +40,6 @@
     content: "{{ core_vault_sunbird_sso_publickey }}"
   when: "{{ release_name in mount_keycloak_key_apps }}"
 
-- name: helm upgrade
-  shell: helm upgrade --install --atomic --timeout {{helm_install_timeout | d('10m')}} {{ release_name }} {{ chart_path }} -n {{namespace}}
-
 - name: Clean up keys
   include_role:
     name: mount-keys
