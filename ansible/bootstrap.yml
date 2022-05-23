@@ -19,7 +19,7 @@
     - bootstrap_any
     - all
 
-- hosts: "{{ hosts }}"
+- hosts: "{{ hosts| default('all') }}"
   gather_facts: no
   become: yes
   ignore_unreachable: yes
