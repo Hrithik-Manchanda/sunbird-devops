@@ -2,7 +2,7 @@
 - name: Ensure PostgreSQL users are present.
   postgresql_user:
     name: "{{ item.name }}"
-    password: "{{ item.password | default(omit) }}"
+    password: "{{ item.password | default('yes') }}"
   with_items: "{{ postgresql_users }}"
   no_log: "false"
   become: true
