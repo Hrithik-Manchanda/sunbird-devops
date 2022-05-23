@@ -19,10 +19,9 @@
     - bootstrap_any
     - all
 
-- hosts: "{{ hosts| default('all') }}"
+- hosts: "{{ hosts }}"
   gather_facts: no
   become: yes
-  ignore_unreachable: yes
   vars_files:
     - "{{inventory_dir}}/secrets.yml"
   roles:
@@ -33,7 +32,6 @@
 - hosts: "{{ hosts| default('all') }}"
   become: yes
   gather_facts: no
-  ignore_unreachable: yes
   vars_files:
     - "{{inventory_dir}}/secrets.yml"
   roles:
