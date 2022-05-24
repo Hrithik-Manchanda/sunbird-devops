@@ -56,6 +56,7 @@
 
 - name: helm install and upgrade
   shell: helm upgrade --install --atomic --timeout {{helm_install_timeout | d("10m")}} {{ release_name }} {{ chart_path }} -n {{namespace}}
+  no_log: "false"
 
 - name: Clean up keys
   include_role:
