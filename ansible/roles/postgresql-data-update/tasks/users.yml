@@ -3,8 +3,9 @@
   postgresql_user:
     name: "{{ item.name }}"
     password: "{{ item.password | default('yes') }}"
+    encrypted: "yes"
   with_items: "{{ postgresql_users }}"
-  no_log: "false"
+  no_log: false
   become: true
   become_user: "{{ postgresql_user }}"
   # See: https://github.com/ansible/ansible/issues/16048#issuecomment-229012509
