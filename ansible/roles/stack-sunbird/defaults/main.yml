@@ -440,7 +440,7 @@ apimanager_liveness_readiness:
     httpGet:
       path: /status
       port: 8001
-    initialDelaySeconds: 15
+    initialDelaySeconds: 30
     periodSeconds: 15
     timeoutSeconds: 5
     failureThreshold: 2
@@ -449,7 +449,7 @@ apimanager_liveness_readiness:
     httpGet:
       path: /status
       port: 8001
-    initialDelaySeconds: 15
+    initialDelaySeconds: 30
     periodSeconds: 15
     timeoutSeconds: 5
     failureThreshold: 2
