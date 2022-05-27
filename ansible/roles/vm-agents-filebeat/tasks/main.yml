@@ -1,10 +1,4 @@
 ---
-- name: Gather package facts
-  package_facts:
-    manager: auto
-  tags:
-   - default
-
 - name: Check the filebeat version if its already installed
   set_fact:
     filebeat_installed_version: "{{ansible_facts.packages['filebeat'][0].version}}"
