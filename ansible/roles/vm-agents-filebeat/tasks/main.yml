@@ -47,7 +47,7 @@
   apt:
     name: ['apt-transport-https', 'filebeat={{filebeat_version}}']
     state: present
-    update_cache: yes
+    update_cache: no
     cache_valid_time: 3600
   tags:
    - default
