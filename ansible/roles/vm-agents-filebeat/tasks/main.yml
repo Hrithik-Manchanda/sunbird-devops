@@ -22,12 +22,6 @@
   tags:
    - default
 
-- name: Add elastic gpg key
-  apt_key:
-    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
-    state: present
-  tags:
-   - default
 
 - name: Add elastic repository
   apt_repository:
