@@ -22,22 +22,6 @@
   tags:
    - default
 
-- name: Copy the filebeat outout config template
-  template:
-    src: "filebeat.yml.j2"
-    dest: "/etc/filebeat/filebeat.yml"
-  tags:
-   - default
-
-- name: Enable and start filebeat as a daemon process
-  systemd:
-    name: filebeat
-    enabled: yes
-    state: restarted
-    daemon_reload: yes
-  tags:
-   - default
-
 - name: Stop filebeat
   systemd:
     name: filebeat
