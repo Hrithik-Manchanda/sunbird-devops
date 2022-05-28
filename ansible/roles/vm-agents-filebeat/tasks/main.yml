@@ -22,13 +22,6 @@
   tags:
    - default
 
-- name: Create the filebeat configs directory
-  file:
-    path: "{{filebeat_config_directory}}"
-    state: directory
-  tags:
-   - default
-
 - name: Copy the filebeat input config template(s)
   template:
     src: "filebeat-inputs.yml.j2"
