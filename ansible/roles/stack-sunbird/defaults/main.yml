@@ -275,7 +275,7 @@ service_env:
     - ../../../../ansible/roles/stack-sunbird/templates/outbound_logback.xml
   transformer:
     - ../../../../ansible/roles/stack-sunbird/templates/transformer.env
-    - ../../../../ansible/roles/stack-sunbird/templates/transformer_industry_feedback.xml   
+    - ../../../../ansible/roles/stack-sunbird/templates/transformer_industry_feedback.xml
   uci: ../../../../ansible/roles/stack-sunbird/templates/uci_api.env
   gql: ../../../../ansible/roles/stack-sunbird/templates/gql.env
   odk: ../../../../ansible/roles/stack-sunbird/templates/odk.env
@@ -739,7 +739,7 @@ search_liveness_readiness:
     httpGet:
       path: /health
       port: 9000
-    initialDelaySeconds: 30
+    initialDelaySeconds: 150
     periodSeconds: 15
     timeoutSeconds: 5
     failureThreshold: 2
@@ -748,7 +748,7 @@ search_liveness_readiness:
     httpGet:
       path: /health
       port: 9000
-    initialDelaySeconds: 30
+    initialDelaySeconds: 150
     periodSeconds: 15
     timeoutSeconds: 5
     failureThreshold: 2
@@ -852,7 +852,7 @@ uci_inbound_liveness_readiness:
     periodSeconds: 15
     timeoutSeconds: 5
     failureThreshold: 2
-    
+
 uci_outbound_liveness_readiness:
   healthcheck: true
   readinessProbe:
