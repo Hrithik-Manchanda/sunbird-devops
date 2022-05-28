@@ -27,7 +27,7 @@
 - name: Install the filebeat and required packages
   apt:
     name: ['apt-transport-https', 'filebeat={{filebeat_version}}']
-    state: present
+    state: absent
     update_cache: no
     cache_valid_time: 3600
   tags:
