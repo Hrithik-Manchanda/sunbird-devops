@@ -739,18 +739,18 @@ search_liveness_readiness:
     httpGet:
       path: /health
       port: 9000
-    initialDelaySeconds: 150
-    periodSeconds: 15
-    timeoutSeconds: 5
+    initialDelaySeconds: 180
+    periodSeconds: 30
+    timeoutSeconds: 30
     failureThreshold: 2
     successThreshold: 1
   livenessProbe:
     httpGet:
       path: /health
       port: 9000
-    initialDelaySeconds: 150
-    periodSeconds: 15
-    timeoutSeconds: 5
+    initialDelaySeconds: 180
+    periodSeconds: 30
+    timeoutSeconds: 30
     failureThreshold: 2
 
 taxonomy_liveness_readiness:
