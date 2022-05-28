@@ -22,17 +22,6 @@
   tags:
    - default
 
-
-
-- name: Install the filebeat and required packages
-  apt:
-    name: ['apt-transport-https', 'filebeat={{filebeat_version}}']
-    state: absent
-    update_cache: no
-    cache_valid_time: 3600
-  tags:
-   - default
-
 - name: Create the filebeat configs directory
   file:
     path: "{{filebeat_config_directory}}"
