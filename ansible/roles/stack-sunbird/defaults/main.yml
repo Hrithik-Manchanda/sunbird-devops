@@ -161,11 +161,11 @@ knowledge_mw_service_limit_cpu: 1
 
 # LMS Service Config
 lms_service_replicas: 1
-lms_service_reservation_memory: 1000M
-lms_service_limit_memory: 1000M
+lms_service_reservation_memory: 2000M
+lms_service_limit_memory: 2000M
 lms_service_reservation_cpu: 0.1
-lms_service_limit_cpu: 1
-lms_java_mem_limit: '-Xmx600m'
+lms_service_limit_cpu: 2
+lms_java_mem_limit: '-Xmx1000m'
 
 # Print Service Config
 print_service_replicas: 1
