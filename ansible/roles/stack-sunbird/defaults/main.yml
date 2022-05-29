@@ -419,7 +419,7 @@ lms_liveness_readiness:
   readinessProbe:
     httpGet:
       path: /service/health
-      port: 9000
+      port: 9005
     initialDelaySeconds: 200
     periodSeconds: 30
     timeoutSeconds: 30
@@ -428,7 +428,7 @@ lms_liveness_readiness:
   livenessProbe:
     httpGet:
       path: /service/health
-      port: 9000
+      port: 9005
     initialDelaySeconds: 200
     periodSeconds: 30
     timeoutSeconds: 30
