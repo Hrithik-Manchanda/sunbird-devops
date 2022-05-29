@@ -520,18 +520,18 @@ content_liveness_readiness:
     httpGet:
       path: /service/health
       port: 9000
-    initialDelaySeconds: 15
-    periodSeconds: 15
-    timeoutSeconds: 5
+    initialDelaySeconds: 150
+    periodSeconds: 30
+    timeoutSeconds: 30
     failureThreshold: 2
     successThreshold: 1
   livenessProbe:
     httpGet:
       path: /service/health
       port: 9000
-    initialDelaySeconds: 15
-    periodSeconds: 15
-    timeoutSeconds: 5
+    initialDelaySeconds: 150
+    periodSeconds: 30
+    timeoutSeconds: 30
     failureThreshold: 2
 
 enc_liveness_readiness:
