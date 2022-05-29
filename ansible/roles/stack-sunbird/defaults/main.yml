@@ -420,7 +420,7 @@ lms_liveness_readiness:
     httpGet:
       path: /service/health
       port: 9000
-    initialDelaySeconds: 150
+    initialDelaySeconds: 200
     periodSeconds: 30
     timeoutSeconds: 30
     failureThreshold: 2
@@ -429,7 +429,7 @@ lms_liveness_readiness:
     httpGet:
       path: /service/health
       port: 9000
-    initialDelaySeconds: 150
+    initialDelaySeconds: 200
     periodSeconds: 30
     timeoutSeconds: 30
     failureThreshold: 2
