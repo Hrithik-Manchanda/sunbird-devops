@@ -16,7 +16,7 @@ actor_replicas: 1
 actor_reservation_memory: 768M
 actor_limit_memory: 1024M
 
-learner_replicas: 2
+learner_replicas: 1
 learner_reservation_memory: 1024M
 learner_limit_memory: 2048M
 learner_reservation_cpu: 0.5
