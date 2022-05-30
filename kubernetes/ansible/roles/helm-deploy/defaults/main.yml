@@ -68,18 +68,18 @@ adminutils_liveness_readiness:
     httpGet:
       path: /health
       port: 4000
-    initialDelaySeconds: 15
-    periodSeconds: 15
-    timeoutSeconds: 5
+    initialDelaySeconds: 90
+    periodSeconds: 30
+    timeoutSeconds: 30
     failureThreshold: 2
     successThreshold: 1
   livenessProbe:
     httpGet:
       path: /health
       port: 4000
-    initialDelaySeconds: 15
-    periodSeconds: 15
-    timeoutSeconds: 5
+    initialDelaySeconds: 90
+    periodSeconds: 30
+    timeoutSeconds: 30
     failureThreshold: 2
 
 api_managerecho_liveness_readiness:
