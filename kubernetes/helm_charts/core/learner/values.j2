@@ -16,8 +16,8 @@ resources:
     cpu: {{learner_cpu_req|default('500m')}}
     memory: {{learner_mem_req|default('500Mi')}}
   limits:
-    cpu: {{learner_cpu_limit|default('1')}}
-    memory: {{learner_mem_limit|default('1024Mi')}}
+    cpu: {{learner_cpu_limit|default('2')}}
+    memory: {{learner_mem_limit|default('2048')}}
 network:
   port: 9000
   targetport: 9000
